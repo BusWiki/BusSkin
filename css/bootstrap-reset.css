@@ -804,19 +804,19 @@ iframe {
     height: auto;
 }
 .col-lg-4.col-sm-4 a{
-    color: #aa7949 !important;
+    color: #FFFFFF !important;
 }
 .mw-redirectedfrom a {
-    color: #aa7949 !important;
+    color: #FFFFFF !important;
 }
 .mw-redirectedfrom a:hover {
-    color: #aa7949 !important;
+    color: #FFFFFF !important;
 }
 .subpages a {
-    color: #aa7949 !important;
+    color: #FFFFFF !important;
 }
 .subpages a:hover {
-    color: #aa7949 !important;
+    color: #FFFFFF !important;
 }
 .navbar-collapse {
     max-height: 380px;
