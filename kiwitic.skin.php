@@ -31,7 +31,7 @@ class SkinKiwitic extends SkinTemplate {
 		$out->addMeta('twitter:title', $this->getSkin()->getTitle() );
 		$out->addMeta('twitter:description', $out->mBodytext );
 		$out->addMeta('twitter:creator', '@wikicocoa');
-		$out->addMeta('twitter:image', 'http://buswiki.2t.yt/skins/kiwitic/img/twit.png');
+		$out->addMeta('twitter:image', 'http://buswiki.ml/skins/kiwitic/img/twit.png');
 		$out->addMeta('apple-mobile-web-app-capable', 'yes');
 		$out->addMeta('apple-mobile-web-app-status-bar-style', '#FFFFFF');
 		$out->addMeta('mobile-web-app-capable', 'Yes');
