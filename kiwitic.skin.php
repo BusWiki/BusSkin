@@ -19,8 +19,8 @@ class SkinKiwitic extends SkinTemplate {
 		
 //		크기 자동 변경
 		$out->addMeta( 'viewport', 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' );
-		$out->addMeta( 'description', 'KiwiWiki' );
-		$out->addMeta( 'keywords', 'wiki,KiwiWiki,키위위키,' . $this->getSkin()->getTitle() );
+		$out->addMeta( 'description', 'BusWiki' );
+		$out->addMeta( 'keywords', 'wiki,BusWiki,버스위키,' . $this->getSkin()->getTitle() );
 //		크롬, 파이어폭스 OS, 오페라
 		$out->addMeta('theme-color', '#551A8B');
 //		윈도우 폰
@@ -33,7 +33,7 @@ class SkinKiwitic extends SkinTemplate {
 		$out->addMeta('twitter:creator', '@wikicocoa');
 		$out->addMeta('twitter:image', 'https://buswiki.ml/skins/kiwitic/img/twit.png');
 		$out->addMeta('apple-mobile-web-app-capable', 'yes');
-		$out->addMeta('apple-mobile-web-app-status-bar-style', '#FFFFFF');
+		$out->addMeta('apple-mobile-web-app-status-bar-style', '#551A8B');
 		$out->addMeta('mobile-web-app-capable', 'Yes');
 //		트위터 카드 완료
 	}//end initPage
