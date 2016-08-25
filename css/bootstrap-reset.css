@@ -341,7 +341,7 @@ pre {
     list-style-image: none;
 }
 html {
-    background-color: #9CE159;
+    background-color: #551A8B;
 }
 #toc {
     display: table;
@@ -661,7 +661,7 @@ blockquote {
     font-size: 16px;
     border: solid 1px #aaa;
     background: #f9f9f9;
-    border-left: solid 5px #9CE159;
+    border-left: solid 5px #551A8B;
     border-radius: 3px;
 }
 .copyright p a {
