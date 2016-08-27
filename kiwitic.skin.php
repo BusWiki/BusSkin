@@ -77,24 +77,21 @@ class KiwiticTemplate extends BaseTemplate {
 		$this->html('headelement');
 		?>
 		<!--header start-->
-		<head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script type="text/javascript">(adsbygoogle = window.adsbygoogle || []).push({});</script>
-<script src="/skins/kiwitic/Gadget-ReferenceTooltips-ko.js" charset='utf-8'></script>
-</head>
-    <header class="head-section">
-      <div class="navbar navbar-default navbar-static-top container">
-          <div class="navbar-header">
-              <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse"
-              type="button"><span class="icon-bar"></span> <span class="icon-bar"></span>
-              <span class="icon-bar"></span></button> <a class="navbar-brand" href="<?php echo $this->data['nav_urls']['mainpage']['href']; ?>"><img src='/skins/kiwitic/img/logo.png' width='200px'></a>
-          </div>
+		<script src="/skins/kiwitic/js/jquery.min.js"></script>
+		<script src="/skins/kiwitic/js/bootstrap.min.js"></script>
+		<script async src="/skins/kiwitic/js/adsbygoogle.js"></script>
+		<script type="text/javascript">(adsbygoogle = window.adsbygoogle || []).push({});</script>
+		<script src="/skins/kiwitic/Gadget-ReferenceTooltips-ko.js" charset='utf-8'></script>
+		<header class="head-section">
+		<div class="navbar navbar-default navbar-static-top container">
+			<div class="navbar-header">
+				<button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse"type="button"><span class="icon-bar"></span> <span class="icon-bar"></span>
+				<span class="icon-bar"></span></button> <a class="navbar-brand" href="<?php echo $this->data['nav_urls']['mainpage']['href']; ?>"><img src='/skins/kiwitic/img/logo.png' width='200px'></a>
+			</div>
 
-          <div class="navbar-collapse collapse">
-              <ul class="nav navbar-nav">
-			  <li id="right-search">
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+				<li id="right-search">
 					<form action="<?php $this->text( 'wgScript' ) ?>" id="searchform" role="search">
 						<input style="display: block;" class="form-control search" type="search" name="search" placeholder="Search" title=" Search <?php echo $wgSitename; ?> [ctrl-option-f]" accesskey="f" id="searchInput" autocomplete="off">
  						<input type="hidden" name="title" value="특수:검색">
@@ -231,12 +228,7 @@ class KiwiticTemplate extends BaseTemplate {
 	</div>
 	</div>
 	</section>
-	<div class="scroll-buttons"><a class="random-link" href="/index.php?title=%ED%8A%B9%EC%88%98:%EC%9E%84%EC%9D%98%EB%AC%B8%EC%84%9C"><i class="fa fa-exchange" aria-hidden="true"></i>
-<span style="display:none">Random</span></a><a class="scroll-button" href="<?php echo '/index.php?title='.$_URITITLE.'&oldid='.$revid.'&action=edit'; ?>"><i class="fa fa-pencil" aria-hidden="true"></i>
-</a><a class="scroll-toc" href="#toc"><i class="fa fa-list-alt" aria-hidden="true"></i>
-</a><a class="scroll-button" href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i>
-</a><a class="scroll-bottom" href="#footer"><i class="fa fa-arrow-down" aria-hidden="true"></i>
-</a></div>
+		<div class="scroll-buttons"><a class="random-link" href="<?php echo $url_prefix; ?>index.php?title=%ED%8A%B9%EC%88%98:%EC%9E%84%EC%9D%98%EB%AC%B8%EC%84%9C"><i class="fa fa-exchange" aria-hidden="true"></i><span style="display:none">Random</span></a><a class="scroll-button" href="<?php echo $url_prefix.'index.php?title='.$_URITITLE.'&oldid='.$revid.'&action=edit'; ?>"><i class="fa fa-pencil" aria-hidden="true"></i></a><a class="scroll-toc" href="#toc"><i class="fa fa-list-alt" aria-hidden="true"></i></a><a class="scroll-button" href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i></a><a class="scroll-bottom" href="#footer"><i class="fa fa-arrow-down" aria-hidden="true"></i></a></div>
 	<!--small footer start -->
     <footer class="footer-small" id="footer">
         <div class="container">
