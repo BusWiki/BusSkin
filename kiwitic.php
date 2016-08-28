@@ -4,9 +4,9 @@ if ( ! defined( 'MEDIAWIKI' ) ) die( "This is an extension to the MediaWiki pack
 
 $wgExtensionCredits['skin'][] = array(
 	'path'        => __FILE__,
-	'name'        => 'Kiwitic',
+	'name'        => 'BusSkin',
 	'url'         => 'https://shapebootstrap.net/item/1524925-acme-free-responsive-corporate-template/comments',
-	'author'      => 'cosmic, 김동동, 2DU, 코코아',
+	'author'      => 'cosmic, 김동동, 2DU, 코코아, 버스버스',
 	'description' => '버스위키의 기본테마입니다.',
         'license-name' => "FREE LICENSE",
         'version' => 'Release',
