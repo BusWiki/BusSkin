@@ -2,7 +2,7 @@
 if ( ! defined( 'MEDIAWIKI' ) ) {
 	die( -1 );
 }//end if
-
+            
 class SkinKiwitic extends SkinTemplate {
 	/** Using Bootstrap */
 	public $skinname = 'kiwitic';
