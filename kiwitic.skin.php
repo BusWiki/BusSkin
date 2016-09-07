@@ -27,7 +27,7 @@ class SkinKiwitic extends SkinTemplate {
 		$out->addMeta('msapplication-navbutton-color', '#551A8B'); 
 //		트위터 카드 시작
 		$out->addMeta('twitter:card', 'summary');
-		$out->addMeta('twitter:site', '@kiwkius');
+		$out->addMeta('twitter:site', '@buswiki');
 		$out->addMeta('twitter:title', $this->getSkin()->getTitle() );
 		$out->addMeta('twitter:description', $out->mBodytext );
 		$out->addMeta('twitter:creator', '@wikicocoa');
@@ -129,6 +129,7 @@ class KiwiticTemplate extends BaseTemplate {
                       </a>
                       <ul aria-labelledby="<?php echo $this->msg($theMsg); ?>" role="menu" class="dropdown-menu" <?php $this->html( 'userlangattributes' ); ?>>
 			<li id="t-re"><?php echo '<a href="//www.facebook.com/BusConcertobuswiki">';?>버스위키 페이스북</a></li>
+			<li id="t-re"><?php echo '<a href="//kiwki.us">';?>키위위키</a></li>
 						</ul>
 				</li>				
 				<?php if ($wgUser->isLoggedIn()) {
