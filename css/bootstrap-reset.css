@@ -307,48 +307,22 @@ ul {
 		s:hover, strike:hover, del:hover {
 			color:#666;background-color:#eee;text-decoration:none;
 		}
+label, span, body, strong, b, div, h1, h2, h3, h4, h5, h6, h7, input { font-family: helvetica, "Noto Sans Japanese", 나눔고딕, "맑은 고딕", "Nanum Gothic", sans-serif; }
+div.mw-geshi div, div.mw-geshi div pre,	div.mw-geshi div span, span.mw-geshi, pre.source-css, pre.source-javascript, pre { font-family: 'monospace'; }
 
-@font-face {
-  font-family: 'Nanum Gothic';
-  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.eot);
-  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'),
-       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff2) format('woff2'),
-       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff) format('woff'),
-       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Nanum Gothic Coding';
-  src: url(//fonts.gstatic.com/ea/nanumgothiccoding/v4/NanumGothicCoding-Regular.eot);
-  src: url(//fonts.gstatic.com/ea/nanumgothiccoding/v4/NanumGothicCoding-Regular.eot?#iefix) format('embedded-opentype'),
-       url(//fonts.gstatic.com/ea/nanumgothiccoding/v4/NanumGothicCoding-Regular.woff2) format('woff2'),
-       url(//fonts.gstatic.com/ea/nanumgothiccoding/v4/NanumGothicCoding-Regular.woff) format('woff'),
-       url(//fonts.gstatic.com/ea/nanumgothiccoding/v4/NanumGothicCoding-Regular.ttf) format('truetype');
-}
-		label, span, body, strong, b, div, h1, h2, h3, h4, h5, h6, h7, input { font-family: 'Nanum Gothic', sans-serif; }
-		
-		div.mw-geshi div,
-div.mw-geshi div pre,
-div.mw-geshi div span,
-span.mw-geshi,
-pre.source-css,
-pre.source-javascript,
-pre {
-    font-family: '니눔고딕코딩', 'Nanum Gothic Coding', monospace !important;
-}
-
-	.mw-content-ltr .toc ul, .mw-content-ltr #toc ul, .mw-content-rtl .mw-content-ltr .toc ul, .mw-content-rtl .mw-content-ltr #toc ul {
+.mw-content-ltr .toc ul, .mw-content-ltr #toc ul, .mw-content-rtl .mw-content-ltr .toc ul, .mw-content-rtl .mw-content-ltr #toc ul {
     list-style-type: none;
     list-style-image: none;
 }
 html {
-    background-color: #551A8B;
+    background-color: #F6CAA7;
 }
 #toc {
     display: table;
-    border: 1px solid rgb(204,204,204);
+    border: none;
     padding: 20px 20px 20px;
     text-align: center;
-    background-color: white;
+    background-color: #F9F9F9;
     max-width: 100%;
     margin-bottom: 10px;
 }
@@ -367,8 +341,8 @@ a.new:hover, a.new:focus {
     margin-bottom: 10px;
 }
 #mw-normal-catlinks {
-	border: 1px solid rgb(204, 204, 204);
-	padding: 5px;
+    border: 1px solid rgb(204, 204, 204);
+    padding: 5px;
 	border-radius: 3px;
 }
 p {
@@ -440,6 +414,13 @@ table {
     margin-top: 15px;
 }
 }
+@media (max-width: 991px){
+@media (min-width: 768px){
+#mobile {
+    display: none;
+}
+}
+}
 @media (min-width: 768px){
 	#searchInput {
     width: 180px;
@@ -467,7 +448,7 @@ div.scroll-buttons {
 .mw-content-ltr .mw-editsection, .mw-content-rtl .mw-content-ltr .mw-editsection {
     margin-left: 0.5em;
 }
-div.scroll-buttons a.random-link {
+div.scroll-buttons a.scroll-button {
     border-radius: 0.4em 0 0 0;
     border-left: 1px solid #545454;
 }
@@ -512,10 +493,6 @@ table.wikitable {
 #catlinks {
     box-shadow: 0 2px 5px rgba(50,50,50,0.1);
 }
-#toc {
-    box-shadow: 0 2px 5px rgba(50,50,50,0.1);
-	border-radius: 3px;
-}
 div.scroll-buttons a {
     display: inline-block;
     float: left;
@@ -554,9 +531,6 @@ div.scroll-buttons a.scroll-button {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-}
-div.scroll-buttons a.scroll-bottom {
-    border-radius: 0 0.4em 0 0;
 }
 .col-lg-4.col-sm-4 a.new {
     color: red;
@@ -657,15 +631,8 @@ ins#noadsense {
 #mw-content-text ul li ul {
     margin-bottom: 5px;
 }
-blockquote {
-    font-size: 16px;
-    border: solid 1px #aaa;
-    background: #f9f9f9;
-    border-left: solid 5px #551A8B;
-    border-radius: 3px;
-}
 .copyright p a {
-    color: #48cfad;
+    color: #71400E;
 }
 /* Drawer css start */
 .mode-drawer #reference-drawer {
@@ -803,25 +770,24 @@ img {
 }
 iframe {
     max-width: 100%;
-    height: auto;
 }
 .col-lg-4.col-sm-4 a{
-    color: #FFFFFF !important;
+    color: #71400E !important;
 }
 .mw-redirectedfrom a {
-    color: #FFFFFF !important;
+    color: #71400E !important;
 }
 .mw-redirectedfrom a:hover {
-    color: #FFFFFF !important;
+    color: #71400E !important;
 }
 .subpages a {
-    color: #FFFFFF !important;
+    color: #71400E !important;
 }
 .subpages a:hover {
-    color: #FFFFFF !important;
+    color: #71400E !important;
 }
 .navbar-collapse {
-    max-height: 380px;
+    max-height: 427.5px;
 }
 #aswift_0 {
     height: 90px;
@@ -869,4 +835,48 @@ table.wikitable.intro.mw-interwikitable.mw-interwiki-legend.mw-collapsible tbody
 }
 table.wikitable.intro.mw-interwikitable.mw-interwiki-legend.mw-collapsible {
 	border-left: 0px;
+}
+input#searchInput {
+    border: none;
+    border-bottom: 2px solid #eee;
+    box-shadow: none;
+    border-radius: 0px;
+}
+input#searchInput:focus {
+    border-bottom: 2px solid #2c3e50;
+}
+form.mw-ui-vform.mw-ui-container.visualClear {
+    margin: auto;
+}
+.c-item {
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    background: #f9f9f9;
+}
+textarea#comment {
+    border: solid 1px #aaa;
+    background: #f9f9f9;
+    border-radius: 3px;
+    margin-top: -30px;
+    padding: 10px;
+}
+.c-form-button {
+    margin-top: -15px;
+}
+.c-form-title {
+    font-weight: normal;
+    font-size: 26px;
+}
+.comments-body form {
+    margin-top: -25px;
+}
+#spy p {
+    margin-top: -15px;
+    margin-bottom: 15px;
+}
+a.external.text::before {
+    content: "\f08b";
+    color: #008000;
+    background-color: #FFF;
+    font-family: FontAwesome;
 }
