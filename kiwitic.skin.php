@@ -122,7 +122,7 @@ class KiwiticTemplate extends BaseTemplate {
                       "dropdown" data-toggle="dropdown" href="#"><i class="fa fa-external-link" aria-hidden="true"></i>  <span id="mobile">외부 페이지<span> <i class="fa fa-angle-down"></i>
                       </a>
                       <ul aria-labelledby="<?php echo $this->msg($theMsg); ?>" role="menu" class="dropdown-menu" <?php $this->html( 'userlangattributes' ); ?>>
-			<li id="t-re"><?php echo '<a href="//www.facebook.com/BusConcertobuswiki">';?>버스위키 페이스북</a></li>
+			<li id="t-re"><?php echo '<a href="/ww.facebook.com/BusConcertobuswiki">';?>버스위키 페이스북</a></li>
 			<li id="t-re"><?php echo '<a href="//kiwki.us">';?>키위위키</a></li>
 						</ul>
 				</li>
@@ -162,7 +162,7 @@ class KiwiticTemplate extends BaseTemplate {
 						<li id="pt-preferences"><?php echo Linker::linkKnown( SpecialPage::getTitleFor( 'preferences', null ), '환경설정', array( 'title' => '환경설정을 불러옵니다.' ) ); ?></li>
 						<li id="pt-watchlist"><?php echo Linker::linkKnown( SpecialPage::getTitleFor( 'watchlist', null ), '주시 문서', array( 'title' => '주시문서를 불러옵니다.') ); ?></li>
 						<li id="pt-mycontris"><?php echo Linker::linkKnown( SpecialPage::getTitleFor( 'Contributions', $wgUser->getName() ), '기여 문서', array( 'title' => '내 기여 목록을 불러옵니다.' ) ); ?></li>
-						<li id="pt-logout"><?php echo '<a href="/w/index.php?title=Special:Logout&returnto='.$_URITITLE.'">로그아웃</a>'?></li>
+						<li id="pt-logout"><?php echo '<a href="/index.php?title=Special:Logout&returnto='.$_URITITLE.'">로그아웃</a>'?></li>
 					</ul>
 				</li>
 				
@@ -172,7 +172,7 @@ class KiwiticTemplate extends BaseTemplate {
 				?>
 				
 				<li id="pt-login">
-				<?php echo '<a href="/w/index.php?title=Special:Login&returnto='.$_URITITLE.'"><i class="fa fa-sign-in" aria-hidden="true"></i><span id="mobile">로그인</span></a>'?>
+				<?php echo '<a href="/index.php?title=Special:Login&returnto='.$_URITITLE.'"><i class="fa fa-sign-in" aria-hidden="true"></i><span id="mobile">로그인</span></a>'?>
 				</li>
 				
 				<?php } ?>
@@ -216,16 +216,13 @@ class KiwiticTemplate extends BaseTemplate {
 		</div>
 	<?php } ?>
 	<!--상단 광고 -->
-	<ins id="noadsense" class="adsbygoogle" style="display:block;height:90px;" data-ad-client="ca-pub-6081569795236180" data-ad-slot="4545283356" data-ad-format="auto"></ins><br>
+	<ins id="noadsense" class="adsbygoogle" style="display:block;height:90px;" data-ad-client="ca-pub-3131839930359480" data-ad-slot="6777099258" data-ad-format="auto"></ins><br>
 	<!--상단 광고 끝 -->
 	<?php if ( $this->data['catlinks'] ) {
 	$this->html( 'catlinks' );
 	echo '<br>';
 	} ?>
 	<?php $this->html( 'bodytext' ); ?>
-	<!--하단 광고 -->
-	<!--<ins id="noadsense" class="adsbygoogle" style="display:block;height:90px;" data-ad-client="ca-pub-6081569795236180" data-ad-slot="4545283356" data-ad-format="auto"></ins><br>-->
-	<!--하단 광고 끝 -->
 	<?php if ( $this->data['dataAfterContent'] ): ?>
 				<div class="data-after-content">
 				<!-- dataAfterContent -->
@@ -248,9 +245,9 @@ class KiwiticTemplate extends BaseTemplate {
                   <div class="copyright">
                     <p><?php $this->html( 'copyright' ) ?></p>
 					<a href="//creativecommons.org/licenses/by-sa/4.0/deed.ko"><img class="pull-right" src="//i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
-					<a href="//www.mediawiki.org"><img style="margin-right: 10px;" class="pull-right" src="//www.mediawiki.org/static/images/poweredby_mediawiki_88x31.png"></a>
+					<a href="/ww.mediawiki.org"><img style="margin-right: 10px;" class="pull-right" src="/ww.mediawiki.org/static/images/poweredby_mediawiki_88x31.png"></a>
 					<a href="//shapebootstrap.net"><img style="margin-right: 10px; margin-top:5px; margin-bottom: 20px;" class="pull-right" src="//shapebootstrap.net/templates/default/images/presets/preset1/logo.png"></a>	
-					<a href="//secure.comodo.com/ttb_searcher/trustlogo?v_querytype=W&v_shortname=CL1&v_search=https://www.kiwki.us/&x=6&y=5"><img class="pull-right" src="//kiwki.us/comodo_secure_seal.png"></a>
+					<a href="//secure.comodo.com/ttb_searcher/trustlogo?v_querytype=W&v_shortname=CL1&v_search=https:/ww.kiwki.us/&x=6&y=5"><img class="pull-right" src="//kiwki.us/comodo_secure_seal.png"></a>
                   </div>
             </div>
         </div>
