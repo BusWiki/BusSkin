@@ -94,7 +94,7 @@ class KiwiticTemplate extends BaseTemplate {
  						<input type="hidden" name="title" value="특수:검색">
  					</form>				
  				</li>
-				<li><?php echo Linker::linkKnown( SpecialPage::getTitleFor( 'RecentChanges', null ), '<i class="fa fa-refresh" aria-hidden="true"></i>  <span id="mobile">최근 바뀐 문서<span>'); ?></li>
+				<li><?php echo Linker::linkKnown( SpecialPage::getTitleFor( 'RecentChanges', null ), '<i class="fa fa-refresh" aria-hidden="true"></i>  <span id="mobile">바뀐 문서<span>'); ?></li>
 				
 				<li><?php echo Linker::linkKnown( SpecialPage::getTitleFor( 'Random', null ), '<i class="fa fa-random" aria-hidden="true"></i> <span id="mobile">랜덤</span>'); ?></li>
 				<?php $theMsg = 'toolbox';
@@ -104,34 +104,28 @@ class KiwiticTemplate extends BaseTemplate {
                       "dropdown" data-toggle="dropdown" href="#"><i class="fa fa-plus-circle" aria-hidden="true"></i>  <span id="mobile">도구</span> <i class="fa fa-angle-down"></i>
                       </a>
                       <ul aria-labelledby="<?php echo $this->msg($theMsg); ?>" role="menu" class="dropdown-menu" <?php $this->html( 'userlangattributes' ); ?>>
-						<?php
-							foreach( $theData as $key => $item ) {
-								if (preg_match('/specialpages|whatlinkshere/', $key)) {
-									continue;
-								}
-								echo $this->makeListItem( $key, $item );
-							}
-						?>
-						<li id="t-re"><?php echo '<a href="/index.php?title=특수:가리키는문서/'.$_URITITLE.'">';?>역링크</a></li>
-						<li id="t-Special"><?php echo Linker::linkKnown( SpecialPage::getTitleFor( '특수문서', null ), '특수문서', array( 'title' => '특수문서 목록을 불러옵니다.' ) ); ?></li>
-						<li id="t-want"><?php echo Linker::linkKnown( SpecialPage::getTitleFor( 'WantedPages', null ), '필요한 문서', array( 'title' => '필요한 문서 목록입니다.' ) ); ?></li>
+						<li id="t-upload"><a href="/wiki/%ED%8A%B9%EC%88%98:%EC%98%AC%EB%A6%AC%EA%B8%B0" title="파일 올리기 [Alt+Shift+u]" accesskey="u"><i class="fa fa-upload" aria-hidden="true"></i> 파일 올리기</a></li>
+						<li id="t-re"><a href="/wiki/특수:필요한문서"><i class="fa fa-bell" aria-hidden="true"></i> 작성 필요</a></li>
+						<li id="t-re"><a href="/wiki/특수:짧은문서"><i class="fa fa-puzzle-piece" aria-hidden="true"></i> 짧은 문서</a></li>
+						<li id="t-re"><?php echo '<a href="/w/index.php?title=특수:가리키는문서/'.$_URITITLE.'">';?><i class="fa fa-repeat" aria-hidden="true"></i> 역 링크</a></li>
+						<li id="t-Special"><?php echo Linker::linkKnown( SpecialPage::getTitleFor( '특수문서', null ), '<i class="fa fa-cog" aria-hidden="true"></i> 특수 문서', array( 'title' => '특수 문서' ) ); ?></li>
 						</ul>
 				</li>
 				<li class="dropdown">
                    <a class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover=
-                      "dropdown" data-toggle="dropdown" href="#"><i class="fa fa-external-link" aria-hidden="true"></i>  <span id="mobile">외부 페이지<span> <i class="fa fa-angle-down"></i>
+                      "dropdown" data-toggle="dropdown" href="#"><i class="fa fa-external-link" aria-hidden="true"></i>  <span id="mobile">외부 페이지</span> <i class="fa fa-angle-down"></i>
                       </a>
                       <ul aria-labelledby="<?php echo $this->msg($theMsg); ?>" role="menu" class="dropdown-menu" <?php $this->html( 'userlangattributes' ); ?>>
-			<li id="t-re"><?php echo '<a href="//www.facebook.com/BusConcertobuswiki">';?>버스위키 페이스북</a></li>
-			<li id="t-re"><?php echo '<a href="//kiwki.us">';?>키위위키</a></li>
+			<li id="t-re"><?php echo '<a href="//www.facebook.com/BusConcertobuswiki">';?><i class="fa fa-external-link" aria-hidden="true"></i> 버스위키 페이스북</a></li>
+			<li id="t-re"><?php echo '<a href="//kiwki.us">';?><i class="fa fa-user-plus" aria-hidden="true"></i> 키위위키</a></li>
 						</ul>
 				</li>
 				<li class="dropdown">
                    <a class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover=
-                      "dropdown" data-toggle="dropdown" href="#"><i class="fa fa-book" aria-hidden="true"></i>  <span id="mobile">도움말<span> <i class="fa fa-angle-down"></i>
+                      "dropdown" data-toggle="dropdown" href="#"><i class="fa fa-book" aria-hidden="true"></i>  <span id="mobile">도움말</span> <i class="fa fa-angle-down"></i>
                       </a>
                       <ul aria-labelledby="<?php echo $this->msg($theMsg); ?>" role="menu" class="dropdown-menu" <?php $this->html( 'userlangattributes' ); ?>>
-                      	<li id="t-help1"><?php echo Linker::linkKnown( Title::makeTitle( NS_HELP, '위키문법' ), '위키 문법', array( 'title' => '위키 문법에 대한 도움말을 보여줍니다.' ) ); ?></li>
+                      	<li id="t-help1"><?php echo Linker::linkKnown( Title::makeTitle( NS_HELP, '위키문법' ), '위키 문법', array( 'title' => '<i class="fa fa-book" aria-hidden="true"></i> 위키 문법에 대한 도움말을 보여줍니다.' ) ); ?></li>
 						</ul>
 				</li>
  
@@ -172,7 +166,7 @@ class KiwiticTemplate extends BaseTemplate {
 				?>
 				
 				<li id="pt-login">
-				<?php echo '<a href="/index.php?title=Special:Login&returnto='.$_URITITLE.'"><i class="fa fa-sign-in" aria-hidden="true"></i><span id="mobile">로그인</span></a>'?>
+				<?php echo '<a href="/index.php?title=Special:Login&returnto='.$_URITITLE.'"><i class="fa fa-sign-in" aria-hidden="true"></i><span id="mobile"> 로그인</span></a>'?>
 				</li>
 				
 				<?php } ?>
