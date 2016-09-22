@@ -94,7 +94,7 @@ class KiwiticTemplate extends BaseTemplate {
  						<input type="hidden" name="title" value="특수:검색">
  					</form>				
  				</li>
-				<li><?php echo Linker::linkKnown( SpecialPage::getTitleFor( 'RecentChanges', null ), '<i class="fa fa-refresh" aria-hidden="true"></i>  <span id="mobile">바뀐 문서<span>'); ?></li>
+				<li><?php echo Linker::linkKnown( SpecialPage::getTitleFor( 'RecentChanges', null ), '<i class="fa fa-refresh" aria-hidden="true"></i>  <span id="mobile">바뀐 문서</span>'); ?></li>
 				
 				<li><?php echo Linker::linkKnown( SpecialPage::getTitleFor( 'Random', null ), '<i class="fa fa-random" aria-hidden="true"></i> <span id="mobile">랜덤</span>'); ?></li>
 				<?php $theMsg = 'toolbox';
@@ -156,7 +156,7 @@ class KiwiticTemplate extends BaseTemplate {
 						<li id="pt-preferences"><?php echo Linker::linkKnown( SpecialPage::getTitleFor( 'preferences', null ), '환경설정', array( 'title' => '환경설정을 불러옵니다.' ) ); ?></li>
 						<li id="pt-watchlist"><?php echo Linker::linkKnown( SpecialPage::getTitleFor( 'watchlist', null ), '주시 문서', array( 'title' => '주시문서를 불러옵니다.') ); ?></li>
 						<li id="pt-mycontris"><?php echo Linker::linkKnown( SpecialPage::getTitleFor( 'Contributions', $wgUser->getName() ), '기여 문서', array( 'title' => '내 기여 목록을 불러옵니다.' ) ); ?></li>
-						<li id="pt-logout"><?php echo '<a href="/index.php?title=Special:Logout&returnto='.$_URITITLE.'">로그아웃</a>'?></li>
+						<li id="pt-logout"><?php echo '<a href="/index.php?title=특수:로그아웃&returnto='.$_URITITLE.'">로그아웃</a>'; ?></li>
 					</ul>
 				</li>
 				
@@ -166,7 +166,7 @@ class KiwiticTemplate extends BaseTemplate {
 				?>
 				
 				<li id="pt-login">
-				<?php echo '<a href="/index.php?title=Special:Login&returnto='.$_URITITLE.'"><i class="fa fa-sign-in" aria-hidden="true"></i><span id="mobile"> 로그인</span></a>'?>
+				<?php echo '<a href="/index.php?title=특수:로그인&returnto='.$_URITITLE.'"><i class="fa fa-sign-in" aria-hidden="true"></i> <span id="mobile">로그인</span></a>'; ?>
 				</li>
 				
 				<?php } ?>
