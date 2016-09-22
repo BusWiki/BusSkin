@@ -22,9 +22,9 @@ class SkinKiwitic extends SkinTemplate {
 		$out->addMeta( 'description', 'BusWiki' );
 		$out->addMeta( 'keywords', 'wiki,BusWiki,버스위키,' . $this->getSkin()->getTitle() );
 //		크롬, 파이어폭스 OS, 오페라
-		$out->addMeta('theme-color', '#551A8B');
+		$out->addMeta('theme-color', '#B20000');
 //		윈도우 폰
-		$out->addMeta('msapplication-navbutton-color', '#551A8B'); 
+		$out->addMeta('msapplication-navbutton-color', '#B20000'); 
 //		트위터 카드 시작
 		$out->addMeta('twitter:card', 'summary');
 		$out->addMeta('twitter:site', '@buswiki');
@@ -33,7 +33,7 @@ class SkinKiwitic extends SkinTemplate {
 		$out->addMeta('twitter:creator', '@wikicocoa');
 		$out->addMeta('twitter:image', 'https://buswiki.ml/skins/kiwitic/img/twit.png');
 		$out->addMeta('apple-mobile-web-app-capable', 'yes');
-		$out->addMeta('apple-mobile-web-app-status-bar-style', '#551A8B');
+		$out->addMeta('apple-mobile-web-app-status-bar-style', '#B20000');
 		$out->addMeta('mobile-web-app-capable', 'Yes');
 //		트위터 카드 완료
 	}//end initPage
@@ -125,7 +125,7 @@ class KiwiticTemplate extends BaseTemplate {
                       "dropdown" data-toggle="dropdown" href="#"><i class="fa fa-book" aria-hidden="true"></i>  <span id="mobile">도움말</span> <i class="fa fa-angle-down"></i>
                       </a>
                       <ul aria-labelledby="<?php echo $this->msg($theMsg); ?>" role="menu" class="dropdown-menu" <?php $this->html( 'userlangattributes' ); ?>>
-                      	<li id="t-help1"><?php echo Linker::linkKnown( Title::makeTitle( NS_HELP, '위키문법' ), '위키 문법', array( 'title' => '<i class="fa fa-book" aria-hidden="true"></i> 위키 문법에 대한 도움말을 보여줍니다.' ) ); ?></li>
+                      	<li id="t-help1"><?php echo Linker::linkKnown( Title::makeTitle( NS_HELP, '위키문법' ), '<i class="fa fa-book" aria-hidden="true"></i> 위키 문법', array( 'title' => '위키 문법에 대한 도움말을 보여줍니다.' ) ); ?></li>
 						</ul>
 				</li>
  
@@ -152,11 +152,12 @@ class KiwiticTemplate extends BaseTemplate {
 				<li class="dropdown">
 				<a href="#" class="dropdown-toggle" type="button" id="login-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo'<img style="width: 32px;" class="profile-img" src="https://secure.gravatar.com/avatar/'.$email.'" /></a>' ; ?></a>
 					<ul class="dropdown-menu">
-						<li id="pt-mypage"><?php echo Linker::linkKnown( Title::makeTitle( NS_USER, $wgUser->getName() ), $wgUser->getName(), array( 'title' => '사용자 문서를 보여줍니다.' ) ); ?></li>
-						<li id="pt-preferences"><?php echo Linker::linkKnown( SpecialPage::getTitleFor( 'preferences', null ), '환경설정', array( 'title' => '환경설정을 불러옵니다.' ) ); ?></li>
-						<li id="pt-watchlist"><?php echo Linker::linkKnown( SpecialPage::getTitleFor( 'watchlist', null ), '주시 문서', array( 'title' => '주시문서를 불러옵니다.') ); ?></li>
-						<li id="pt-mycontris"><?php echo Linker::linkKnown( SpecialPage::getTitleFor( 'Contributions', $wgUser->getName() ), '기여 문서', array( 'title' => '내 기여 목록을 불러옵니다.' ) ); ?></li>
-						<li id="pt-logout"><?php echo '<a href="/index.php?title=특수:로그아웃&returnto='.$_URITITLE.'">로그아웃</a>'; ?></li>
+						<li id="pt-mypage"><?php echo Linker::linkKnown( Title::makeTitle( NS_USER, $wgUser->getName() ),'<i class="fa fa-user" aria-hidden="true"></i> ' . $wgUser->getName(), array( 'title' => '사용자 문서를 보여줍니다.' ) ); ?></li>
+						<li id="pt-preferences"><?php echo Linker::linkKnown( SpecialPage::getTitleFor( 'preferences', null ), '<i class="fa fa-cog" aria-hidden="true"></i> 환경설정', array( 'title' => '환경설정을 불러옵니다.' ) ); ?></li>
+						<li id="pt-watchlist"><?php echo Linker::linkKnown( SpecialPage::getTitleFor( 'watchlist', null ), '<i class="fa fa-bookmark" aria-hidden="true"></i> 주시 문서', array( 'title' => '주시문서를 불러옵니다.') ); ?></li>
+						<li id="pt-mycontris"><?php echo Linker::linkKnown( SpecialPage::getTitleFor( 'Contributions', $wgUser->getName() ), '<i class="fa fa-pencil" aria-hidden="true"></i> 기여 문서', array( 'title' => '내 기여 목록을 불러옵니다.' ) ); ?></li>
+						<li id="pt-notifications"><?php echo Linker::linkKnown( SpecialPage::getTitleFor( 'Notifications', null ), '<i class="fa fa-comment" aria-hidden="true"></i> 알림', array( 'title' => '알림 페이지로 이동합니다.' ) ); ?></li>
+						<li id="pt-logout"><?php echo '<a href="/index.php?title=특수:로그아웃&returnto='.$_URITITLE.'"><i class="fa fa-times" aria-hidden="true"></i> 로그아웃</a>'; ?></li>
 					</ul>
 				</li>
 				
